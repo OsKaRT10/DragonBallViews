@@ -1,6 +1,6 @@
 import {Animated, Image, ImageBackground, ScrollView, StyleSheet, Text} from "react-native";
 import View = Animated.View;
-import {StyleControles} from "./app/ControlesComponent/StylesControles";
+import {StyleControles} from "./StylesControles";
 
 
 export default function App() {
