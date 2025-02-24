@@ -1,4 +1,4 @@
-import {Image, StyleSheet, View, Text} from "react-native";
+import {Image, StyleSheet, View, Text, TouchableOpacity} from "react-native";
 
 
 interface Props {
@@ -14,6 +14,7 @@ const imageSources: { [key: string]: any } = {
 
 export const WhatifRectangle = ({ title, description, url }: Props) => {
     return (
+        <TouchableOpacity>
         <View style={styles.container}>
             <View style={styles.encabezado}>
                 <Image style={styles.imagen} source={imageSources[url]} />
@@ -23,7 +24,7 @@ export const WhatifRectangle = ({ title, description, url }: Props) => {
             <Text style={styles.texto}>{description}</Text>
 
         </View>
-
+        </TouchableOpacity>
     );
 };
 

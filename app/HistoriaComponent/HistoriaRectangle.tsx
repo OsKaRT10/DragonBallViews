@@ -1,4 +1,4 @@
-import {Image, StyleSheet, View, Text} from "react-native";
+import {Image, StyleSheet, View, Text, TouchableOpacity} from "react-native";
 
 
 interface Props {
@@ -8,16 +8,18 @@ interface Props {
 
 const imageSources: { [key: string]: any } = {
     "goku": require("../../assets/hexagon_goku.png"),
-    "vegeta": require("../../assets/vegeta.jpg"),
-    "gohan": require("../../assets/gohan.jpg"),
+    "vegeta": require("../../assets/hexagon_vegeta.png"),
+    "gohan": require("../../assets/hexagon_gohan.png"),
 };
 
 export const RectangleDesign = ({ text, url }: Props) => {
     return (
+        <TouchableOpacity>
         <View style={styles.container}>
                 <Image style={styles.imagen} source={imageSources[url]} />
             <Text style={styles.texto}>{text}</Text>
         </View>
+        </TouchableOpacity>
     );
 };
 

@@ -1,4 +1,4 @@
-import { Image, StyleSheet, View, Text } from "react-native";
+import {Image, StyleSheet, View, Text, TouchableOpacity} from "react-native";
 
 interface Props {
     url: string;
@@ -12,8 +12,10 @@ const imageSources: { [key: string]: any } = {
 export const PersonajesDesign = ({ text, url }: Props) => {
     return (
         <View style={styles.container}>
-            <Image style={styles.imagen} source={imageSources[url]} />
-            <Text style={styles.texto}>{text}</Text>
+            <TouchableOpacity>
+                <Image style={styles.imagen} source={imageSources[url]} />
+            </TouchableOpacity>
+                <Text style={styles.texto}>{text}</Text>
         </View>
     );
 };

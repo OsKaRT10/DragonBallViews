@@ -1,6 +1,6 @@
 import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from "react-native";
 
-import {NoticiasRectangle} from "./app/noticiasComponent/NoticiaRectangle";
+import {WhatifRectangle} from "./app/HistoriaDetailComponent/WhatIfRectangle";
 
 export default function App() {
     return (
@@ -8,17 +8,18 @@ export default function App() {
             <ScrollView style={styles.containerScroll} horizontal={false}>
                 <View>
                     <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")}></Image>
-                    <Text style={styles.titulo}>NOTICIAS</Text>
+                    <Text style={styles.titulo}>SON GOKU: What if?</Text>
                 </View>
 
-                <NoticiasRectangle url={"video"} title={"Actualización de DRAGON BALL: Sparking! ZERO: cambios y " +
-                    "ajustes en las funciones y los sistemas de combate"} description={""}/>
 
-                <NoticiasRectangle url={"video"} title={"Actualización de DRAGON BALL: Sparking! ZERO: cambios y " +
-                    "ajustes en las funciones y los sistemas de combate"} description={""}/>
-
-                <NoticiasRectangle url={"video"} title={"Actualización de DRAGON BALL: Sparking! ZERO: cambios y " +
-                    "ajustes en las funciones y los sistemas de combate"} description={""}/>
+                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"Tienes que tomar una decisión de diálogo cuando tengas las ocasión elige la opción “Luchar en solitario”, asi pasaras a la fase “Raditz contra la Escuela Tortuga”.\n" +
+                    "En tu combate contra Raditz tendrás que ..."}/>
+                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"Tienes que tomar una decisión de diálogo cuando tengas las ocasión elige la opción “Luchar en solitario”, asi pasaras a la fase “Raditz contra la Escuela Tortuga”.\n" +
+                    "En tu combate contra Raditz tendrás que ..."}/>
+                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"Tienes que tomar una decisión de diálogo cuando tengas las ocasión elige la opción “Luchar en solitario”, asi pasaras a la fase “Raditz contra la Escuela Tortuga”.\n" +
+                    "En tu combate contra Raditz tendrás que ..."}/>
+                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"Tienes que tomar una decisión de diálogo cuando tengas las ocasión elige la opción “Luchar en solitario”, asi pasaras a la fase “Raditz contra la Escuela Tortuga”.\n" +
+                    "En tu combate contra Raditz tendrás que ..."}/>
 
             </ScrollView>
         </ImageBackground>

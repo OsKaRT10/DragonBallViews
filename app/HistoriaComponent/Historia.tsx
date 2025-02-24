@@ -11,9 +11,9 @@ export default function App() {
                 </View>
 
                 <RectangleDesign url={"goku"} text={"Goku(super)"}/>
-                <RectangleDesign url={"goku"} text={"Goku(super)"}/>
-                <RectangleDesign url={"goku"} text={"Goku(super)"}/>
-                <RectangleDesign url={"goku"} text={"Goku(super)"}/>
+                <RectangleDesign url={"vegeta"} text={"Vegeta(super)"}/>
+                <RectangleDesign url={"gohan"} text={"Gohan(super)"}/>
+                <RectangleDesign url={"gohan"} text={"Gohan(super)"}/>
                 <RectangleDesign url={"goku"} text={"Goku(super)"}/>
                 <RectangleDesign url={"goku"} text={"Goku(super)"}/>
                 <RectangleDesign url={"goku"} text={"Goku(super)"}/>

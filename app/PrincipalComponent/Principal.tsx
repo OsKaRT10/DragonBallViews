@@ -12,7 +12,6 @@ export default function App() {
             </View>
 
             <View style={styles.headerContainer}>
-
                 <TouchableOpacity>
                     <HeaderRectangle url={"dlc"} text={"DLC´S"}/>
                 </TouchableOpacity>
