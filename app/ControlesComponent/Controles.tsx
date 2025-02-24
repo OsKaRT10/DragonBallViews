@@ -7,7 +7,7 @@ export default function App() {
     return (
         <ImageBackground source={require('./assets/fondo_proyecto.jpg')} style={styles.container} >
             <View>
-                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")}></Image>
+                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
                 <Text style={styles.titulo}>DRAGON BALL: SPARKING! ZERO: Combos y funciones</Text>
             </View>
 

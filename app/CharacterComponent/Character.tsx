@@ -6,7 +6,7 @@ export default function App() {
         <ImageBackground source={require('./assets/fondo_proyecto.jpg')} style={styles.container} >
             <ScrollView style={styles.containerScroll}>
                 <View>
-                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")} />
+                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")} />
                     <Text style={styles.titulo}>PERSONAJES</Text>
                 </View>
 

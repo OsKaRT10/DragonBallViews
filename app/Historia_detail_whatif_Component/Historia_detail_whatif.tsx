@@ -8,7 +8,7 @@ export default function App() {
         <ImageBackground source={require('./assets/fondo_proyecto.jpg')} style={styles.container} >
             <ScrollView style={styles.containerScroll} horizontal={false}>
                 <View>
-                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")}></Image>
+                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
                     <Text style={styles.titulo}>SON GOKU: What if?</Text>
                 </View>
 

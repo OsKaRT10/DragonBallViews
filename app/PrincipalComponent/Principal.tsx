@@ -8,7 +8,7 @@ export default function App() {
         <ImageBackground source={require("./assets/fondo_proyecto.jpg")} style={styles.container}>
 
             <View>
-                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")}></Image>
+                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
             </View>
 
             <View style={styles.headerContainer}>

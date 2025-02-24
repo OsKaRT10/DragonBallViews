@@ -8,7 +8,7 @@ export default function App() {
         >
             <View style={styles.innerContainer}>
                 <View>
-                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")} />
+                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")} />
                     <Text style={styles.titulo}>PERFIL DE USUARIO</Text>
                     <Text style={styles.username}>@Username</Text>
                     <Text style={styles.persfav}>PERSONAJES FAVORITOS</Text>

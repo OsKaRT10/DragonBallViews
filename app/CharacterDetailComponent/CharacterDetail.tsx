@@ -8,13 +8,15 @@ export default function App() {
             style={styles.container}
         >
             <View>
-                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.jpg")}></Image>
+                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
                 <Text style={styles.titulo}>PERSONAJES</Text>
             </View>
             <ScrollView style={styles.principal} horizontal={false}>
                 <View style={styles.adjustContainer}>
-                    <Text style={styles.goku}>Goku (Super)</Text>
-
+                    <View style={{flexDirection:'row'}}>
+                        <Text style={styles.goku}>Goku (Super)</Text>
+                        <Image style={styles.like} source={require("./assets/Like.png")}></Image>
+                    </View>
                     <View style={styles.imagenContainer}>
                         <Image style={styles.imagen} source={require("./assets/goku.jpg")}/>
                     </View>
@@ -91,6 +93,10 @@ const styles = StyleSheet.create({
         textShadowColor: "black",
         textShadowOffset: { width: 4, height: 0 },
         textShadowRadius: 5,
+        alignSelf: 'center',
+    },
+    like: {
+        marginTop: 15,
     },
     imagenContainer: {
         alignSelf: 'center',
