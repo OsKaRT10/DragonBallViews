@@ -1,6 +1,6 @@
 
 import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from "react-native";
-import {HistoriaWhatifRectangle} from "./app/Historia_detail_whatif_Component/HistoriaWhatifRectangle";
+import {HistoriaWhatifRectangle} from "../HistoriaWhatifRectangle";
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
                     title={"Codo con codo"}
                     description={"El primer episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de \"Codo con codo\", al que se puede acceder durante las fases del Arco de los Saiyans, en el Capítulo 1."}
                     url2={"wif"}
-                    description2={"Para desbloquear este episodio especial, comienza entrando en la fase \"¿El dúo más poderoso de la Tierra?!\", en la que simplemente tienes que tomar una decisión de diálogo.\n" + "\n" +
+                    description2={"Para desbloquear este episodio especial, comienza entrando en la fase \"¿El dúo más poderoso de la Tierra?!\", en la que simplemente tienes que tomar una decisión de diálogo.\n" +
                         "Cuando tengas la ocasión, elige la opción \"Luchar en solitario\".\n" +
                         "De esta manera, pasarás a la fase \"Raditz contra la Escuela Tortuga\".\n" +
                         "\n" +

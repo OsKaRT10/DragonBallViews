@@ -3,9 +3,11 @@ import { Image, StyleSheet, View, Text } from "react-native";
 interface Props {
     url: string;
     url2: string;
+    url3: string;
     title: string;
     description: string;
     description2: string;
+    description3: string;
 }
 
 const imageSources: { [key: string]: any } = {
@@ -13,10 +15,9 @@ const imageSources: { [key: string]: any } = {
     "wif": require("../../assets/whatif.png"),
 };
 
-export const HistoriaWhatifRectangle = ({ title, description, description2, url, url2 }: Props) => {
+export const HistoriaWhatifRectangle = ({ title, description, description2, description3, url, url2, url3 }: Props) => {
     return (
         <View style={styles.container}>
-            {/* Encabezado con imagen y título */}
             <View style={styles.encabezado}>
                 <Image style={styles.imagen} source={imageSources[url]} />
                 <Text style={styles.titulo}>{title}</Text>
@@ -26,8 +27,11 @@ export const HistoriaWhatifRectangle = ({ title, description, description2, url,
 
             <Image style={styles.imagenContainer} source={imageSources[url2]} />
 
-
             <Text style={styles.description2}>{description2}</Text>
+
+            <Image style={styles.imagenContainer} source={imageSources[url3]} />
+
+            <Text style={styles.description2}>{description3}</Text>
         </View>
     );
 };
