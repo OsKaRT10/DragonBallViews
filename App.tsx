@@ -1,7 +1,6 @@
-
 import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from "react-native";
-import {HistoriaWhatifRectangle} from "./app/Historia_detail_whatif_Component/HistoriaWhatifRectangle";
 
+import {NoticiasRectangle} from "./app/noticiasComponent/NoticiaRectangle";
 
 export default function App() {
     return (
@@ -9,24 +8,79 @@ export default function App() {
             <ScrollView style={styles.containerScroll} horizontal={false}>
                 <View>
                     <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
-                    <Text style={styles.titulo}>SON GOKU: What if?</Text>
+                    <Text style={styles.titulo}>NOTICIAS</Text>
                 </View>
 
-                <HistoriaWhatifRectangle
-                    url={"piccolo"}
-                    title={"Codo con codo"}
-                    description={"El primer episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de \"Codo con codo\", al que se puede acceder durante las fases del Arco de los Saiyans, en el Capítulo 1."}
-                    url2={"wif"}
-                    description2={"Para desbloquear este episodio especial, comienza entrando en la fase \"¿El dúo más poderoso de la Tierra?!\", en la que simplemente tienes que tomar una decisión de diálogo.\n" + "\n" +
-                        "Cuando tengas la ocasión, elige la opción \"Luchar en solitario\".\n" +
-                        "De esta manera, pasarás a la fase \"Raditz contra la Escuela Tortuga\".\n" +
+                <NoticiasRectangle
+                    videoUrl={'https://www.youtube.com/embed/2f8v9L8fyok'}
+                    title={"AJUSTES EN EL SISTEMA DE COMBATE"}
+                    description={"Ataques de carga (ataque de golpe o cadena frenética): ya no retrocederás mientras cargues al recibir un ataque frenético o una Ráfaga de Ki frenética de un rival en el modo Sparking!.\n" +
+                        "Ataque frenético: ahora es más difícil ejecutar por error un ataque de golpe durante los ataques frenéticos.\n" +
+                        "Gran Tajo: golpear a un rival que está cayendo después de un Gran Tajo con otro Gran Tajo lo hará volar por los aires dando vueltas.\n" +
+                        "Ráfaga de Ki frenética: ya no tendrás que ejecutar una evasión veloz cuando te golpeen.\n" +
+                        "Ráfaga de Ki de golpe: ahora será más fácil que te golpeen cuando dispares al moverte.\n" +
+                        "Percepción/Superpercepción:  \n" +
+                        "‐Tras su activación, se consumirá una cierta cantidad de Ki. \n" +
+                        "‐Se ha aumentado el tiempo para poder ejecutar la siguiente acción una vez terminado el movimiento. \n" +
+                        "Supercontraataque: ha aumentado el tiempo para poder ejecutar una acción tras fallar al realizar el movimiento.\n" +
+                        "Impacto Veloz: se ha retrasado el momento de poder volver a ejecutar una acción una vez que acabe el movimiento.\n" +
+                        "Cambio de persecución: el daño infligido por personajes gigantes se ha reducido cuando se realice un cambio de persecución contra ellos.\n" +
+                        "Recuperación de impacto:  \n" +
+                        "‐Cuando te derriben con Golpe Levantador, si mantienes pulsado el botón, se activará la recuperación de impacto al tocar el suelo.  \n" +
+                        "‐Además, cuando te derriben y salgas dando vueltas, si mantienes pulsado el botón, se activará la recuperación de impacto al tocar el suelo."}/>
+
+                <NoticiasRectangle
+                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
+                    title={"AJUSTES FUNCIONALIDAD Y HABILIDADES"}
+                    description={"Combate de episodio: ahora se puede cambiar la dificultad incluso si estás utilizando un Orbe Dragón.\n" +
+                        "Combate personalizado: se han añadido más situaciones, efectos y texto que podrás configurar.\n" +
+                        "Partida de jugador:  \n" +
+                        "‐ Se ha modificado la partida rápida para que no tengas que entrar en una sala y te emparejen instantáneamente con un rival.\n" +
+                        "‐ También hemos añadido \"Búsqueda de sala rápida\" a la partida rápida.  \n" +
+                        "Partida igualada: se ha añadido un tiempo de espera antes del comienzo de la partida como penalización según el número de veces que te hayas desconectado.\n" +
+                        "Configuración del combate: ahora puedes ver la explicación de los controles al seleccionar un personaje.\n" +
+                        "Entrenamiento: se ha añadido la opción \"En guardia tras los ataques\" cuando se juegue contra una CPU." +
+                        "" + "\n" + "\n" + "\n" +
+                        "Habilidades generales de evasión automática (p. ej., Sentido salvaje): el adversario no podrá usar estas habilidades al realizar un combo y ejecutar a continuación una precipitación.\n" +
+                        "Sentido salvaje: se ha reducido el daño de ataque.\n" +
+                        "Kaioken: se ha reducido el consumo de habilidad acumulada (solo para Son Goku [Z - Inicio]).\n" +
+                        "¡Tachán!: se ha reducido el consumo de habilidad acumulada.\n" +
+                        "¡Solo necesito cinco segundos!: el Ki se recupera completamente."}/>
+
+                <NoticiasRectangle
+                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
+                    title={"11 PERSONAJES: SUPER HERO!"}
+                    description={"Los nuevos personajes que debutan en DRAGON BALL: Sparking! ZERO  son:\n" +
                         "\n" +
-                        "En tu combate contra Raditz (en el que te acompañará Krilin), tendrás que cumplir con la condición secundaria de la fase para poder desbloquear el acceso a este episodio Sparking en cuestión.\n" + "\n" +
-                        "Básicamente, lo que debes hacer aquí es derrotar a Raditz lo más rápido que puedas, antes de que Piccolo tenga tiempo suficiente de cargar su cañón de rayos.\n"}
-                    url3={"wif"}
-                    description3={"Sabrás que Piccolo está cerca de cargar su rayo porque te avisará con una frase. Si tardas demasiado tiempo en derrotar a Raditz, simplemente regresarás a la línea de misiones originales, cosa que no te interesa. Por lo tanto, asegúrate de ser lo suficientemente rápido (puedes usar este truco de nuestra guía para conseguirlo).\n" +
+                        " \n" +
                         "\n" +
-                        "En caso de cumplir el requisito secundario correctamente, darás inicio al episodio \"Codo con codo\", que es bastante largo para tratarse de un episodio Sparking. De todas formas, no hay más caminos a partir de aquí que se bifurquen, así que solo tienes que ir derrotando a los siguientes contrincantes hasta terminar el episodio."}/>
+                        "• Son Gohan (Super Hero)\n" +
+                        "\n" +
+                        "• Son Gohan (Super Hero), Súper Saiyan\n" +
+                        "\n" +
+                        "• Son Gohan definitivo (Super Hero)\n" +
+                        "\n" +
+                        "• Son Gohan Beast\n" +
+                        "\n" +
+                        "• Piccolo (Super Hero)\n" +
+                        "\n" +
+                        "• Piccolo (Super Hero), despertar del poder\n" +
+                        "\n" +
+                        "• Piccolo Naranja\n" +
+                        "\n" +
+                        "• Piccolo Naranja, forma gigante\n" +
+                        "\n" +
+                        "• Gamma 1\n" +
+                        "\n" +
+                        "• Gamma 2\n" +
+                        "\n" +
+                        "• Cell Max"}/>
+
+                <NoticiasRectangle
+                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
+                    title={""}
+                    description={""}/>
+
             </ScrollView>
         </ImageBackground>
     )

@@ -1,25 +1,33 @@
-import { Image, StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import WebView from "react-native-webview";
 
 interface Props {
-    url: string;
     title: string;
-    description?: string;
+    description: string;
+    videoUrl: string;
 }
 
-const imageSources: { [key: string]: any } = {
-    "video": require("../../assets/b0a4c26777707c9e3121e735faa3b71c.jpg"),
-};
+export const NoticiasRectangle = ({ title, description, videoUrl }: Props) => {
+    const [expanded, setExpanded] = useState(false);
 
-export const NoticiasRectangle = ({ title, description, url }: Props) => {
     return (
         <View style={styles.container}>
-            <Image style={styles.imagen} source={imageSources[url]} />
+            <View style={styles.videoContainer}>
+                <WebView
+                    style={styles.video}
+                    source={{ uri: videoUrl }}
+                />
+            </View>
 
             <Text style={styles.titulo}>{title}</Text>
-            <Text style={styles.texto}>{description}</Text>
 
-            <TouchableOpacity style={styles.sabermas}>
-                <Text style={styles.sabermasTexto}>Saber más...</Text>
+            <Text style={styles.texto} numberOfLines={expanded ? undefined : 4}>
+                {description}
+            </Text>
+
+            <TouchableOpacity style={styles.sabermas} onPress={() => setExpanded(!expanded)}>
+                <Text style={styles.sabermasTexto}>{expanded ? "Mostrar menos" : "Saber más..."}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -35,17 +43,20 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         shadowColor: 'black',
     },
-    imagen: {
-        width: "90%",
-        height: 150,
-        resizeMode: "cover",
+    videoContainer: {
+        flex: 1,
+    },
+    video: {
+        width: 350,
+        height: 200,
         alignSelf: 'center',
     },
     titulo: {
         fontSize: 16,
-        textAlign: 'left',
-        marginTop: 10,
-        marginHorizontal: 15,
+        textAlign: 'center',
+        marginTop: 20,
+        marginHorizontal: 10,
+        fontWeight: "bold",
     },
     texto: {
         fontSize: 16,
@@ -57,7 +68,7 @@ const styles = StyleSheet.create({
         width: 80,
         height: 28,
         alignSelf: 'flex-end',
-
+        marginTop: 15,
         padding: 8,
         backgroundColor: 'lightblue',
         borderWidth: 1,
