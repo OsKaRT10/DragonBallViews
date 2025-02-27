@@ -1,52 +1,76 @@
-import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from "react-native";
+import {Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {HeaderRectangle} from "./app/PrincipalComponent/HeaderRectangle";
+import {CategoriasRectangle} from "./app/PrincipalComponent/Bodyrectangle";
 
-import {WhatifRectangle} from "./app/HistoriaDetailComponent/WhatIfRectangle";
 
 export default function App() {
     return (
-        <ImageBackground source={require('./assets/fondo_proyecto.jpg')} style={styles.container} >
-            <ScrollView style={styles.containerScroll} horizontal={false}>
-                <View>
+        <ImageBackground source={require("./assets/fondo_proyecto.jpg")} style={styles.container}>
+
+            <View style={styles.alignContainer}>
                     <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
-                    <Text style={styles.titulo}>SON GOKU: What if?</Text>
-                </View>
+                    <Image style={styles.inicioSesion}source={require("./assets/INICIO_SESION.png")}></Image>
+            </View>
 
+            <View style={styles.headerContainer}>
+                <TouchableOpacity>
+                    <HeaderRectangle url={"dlc"} text={"DLC´S"}/>
+                </TouchableOpacity>
 
-                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"El primer episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de Codo con codo, al que se puede acceder durante las fases del Arco de los Saiyans, en el Capítulo 1."}/>
-                <WhatifRectangle url={"piccolo"} title={"Superando los limites"} description={"El segundo episodio Sparking que está disponible para desbloquear en la historia de Goku es el que recibe el título de Superando los límites, y, como el primero, puedes tener acceso a él durante las fases del Arco de los Saiyans..."}/>
-                <WhatifRectangle url={"piccolo"} title={"El futuro cambiante"} description={"El tercer y último episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de \"El futuro cambiante\", al que se puede acceder durante las fases del Arco de los androides y Célula..."}/>
-            </ScrollView>
-        </ImageBackground>
-    )
+                <TouchableOpacity>
+                    <HeaderRectangle url={"new"} text={"NOTICIAS"}/>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <HeaderRectangle url={"acc"} text={"MI CUENTA"}/>
+                </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity>
+                <CategoriasRectangle url={"chr"} text={"PERSONAJES"}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <CategoriasRectangle url={"ctr"} text={"CONTROLES"}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <CategoriasRectangle url={"his"} text={"HISTORIA"}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <CategoriasRectangle url={"plt"} text={"PLATINO"}/>
+            </TouchableOpacity>
+
+        </ImageBackground>)
 }
 
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+    },
+    alignContainer: {
+        flexDirection: "row",
+        alignSelf: 'center',
     },
     imagenChaoz: {
         marginTop: 15,
         width: 50,
         height: 50,
-        alignSelf: 'center',
         borderRadius: 1000,
         borderWidth: 1,
+        position: 'relative',
     },
-    titulo: {
-        marginTop: 30,
-        fontSize: 22,
-        fontWeight: "bold",
-        textAlign: "center",
-        color: "white",
-        textShadowColor: "black",
-        textShadowOffset: { width: 4, height: 0 },
-        textShadowRadius: 5,
+    inicioSesion: {
+        width: 105,
+        height: 30,
+        marginLeft: 105,
+        marginTop: 27,
+        position: "absolute",
     },
-    containerScroll: {
-        width: "90%",
-    }
+    headerContainer: {
+        alignSelf: "center",
+        flexDirection: "row",
+    },
+
 })
