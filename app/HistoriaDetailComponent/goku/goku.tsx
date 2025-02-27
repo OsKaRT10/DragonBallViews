@@ -12,9 +12,9 @@ export default function App() {
                 </View>
 
 
-                <WhatifRectangle url={"piccolo"} title={"Codo con codo"} description={"El primer episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de Codo con codo, al que se puede acceder durante las fases del Arco de los Saiyans, en el Capítulo 1."}/>
-                <WhatifRectangle url={"piccolo"} title={"Superando los limites"} description={"El segundo episodio Sparking que está disponible para desbloquear en la historia de Goku es el que recibe el título de Superando los límites, y, como el primero, puedes tener acceso a él durante las fases del Arco de los Saiyans..."}/>
-                <WhatifRectangle url={"piccolo"} title={"El futuro cambiante"} description={"El tercer y último episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de \"El futuro cambiante\", al que se puede acceder durante las fases del Arco de los androides y Célula..."}/>
+                <WhatifRectangle url={"goku"} title={"Codo con codo"} description={"El primer episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de Codo con codo, al que se puede acceder durante las fases del Arco de los Saiyans, en el Capítulo 1."}/>
+                <WhatifRectangle url={"goku"} title={"Superando los limites"} description={"El segundo episodio Sparking que está disponible para desbloquear en la historia de Goku es el que recibe el título de Superando los límites, y, como el primero, puedes tener acceso a él durante las fases del Arco de los Saiyans..."}/>
+                <WhatifRectangle url={"goku"} title={"El futuro cambiante"} description={"El tercer y último episodio Sparking que puedes desbloquear en la historia de Goku es el que recibe el título de \"El futuro cambiante\", al que se puede acceder durante las fases del Arco de los androides y Célula..."}/>
             </ScrollView>
         </ImageBackground>
     )

@@ -8,8 +8,11 @@ interface Props {
 }
 
 const imageSources: { [key: string]: any } = {
-    "piccolo": require("../../assets/piccolo.png"),
-    "wif": require("../../assets/historia_whatif/goku/wiGoku_1.png"),
+    "goku": require("../../assets/historia_whatif/goku/daima_ss4.jpg"),
+    "vegeta": require("../../assets/historia_whatif/vegeta/daima_vegetassj3.jpg"),
+    "gohan": require("../../assets/historia_whatif/gohan/gohan.jpg"),
+    "piccolo": require("../../assets/historia_whatif/piccolo/piccolo_daima.jpg"),
+    "freezer": require("../../assets/historia_whatif/freezer/freezer.jpg"),
 };
 
 export const WhatifRectangle = ({ title, description, url }: Props) => {

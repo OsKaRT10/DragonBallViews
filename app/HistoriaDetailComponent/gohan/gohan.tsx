@@ -12,7 +12,7 @@ export default function App() {
                 </View>
 
 
-                <WhatifRectangle url={"piccolo"} title={"El guerrero mas fuerte"} description={"El primer y único episodio Sparking que puedes desbloquear en la historia de Son Gohan es el que recibe el título de \"El guerrero más fuerte\", al que se puede acceder durante las fases del Arco de Bills, Dios de la Destrucción/resurrección de Freezer..."}/>
+                <WhatifRectangle url={"gohan"} title={"El guerrero mas fuerte"} description={"El primer y único episodio Sparking que puedes desbloquear en la historia de Son Gohan es el que recibe el título de \"El guerrero más fuerte\", al que se puede acceder durante las fases del Arco de Bills, Dios de la Destrucción/resurrección de Freezer..."}/>
             </ScrollView>
         </ImageBackground>
     )
