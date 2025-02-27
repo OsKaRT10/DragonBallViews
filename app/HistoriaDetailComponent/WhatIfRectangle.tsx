@@ -9,7 +9,7 @@ interface Props {
 
 const imageSources: { [key: string]: any } = {
     "piccolo": require("../../assets/piccolo.png"),
-    "wif": require("../../assets/whatif.png"),
+    "wif": require("../../assets/historia_whatif/goku/wiGoku_1.png"),
 };
 
 export const WhatifRectangle = ({ title, description, url }: Props) => {

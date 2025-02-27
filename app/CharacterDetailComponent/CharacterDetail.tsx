@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: "black",
         backgroundColor: 'rgba(255, 255, 255, 0.39)',
+        alignItems:'center',
     },
     goku: {
         fontSize: 22,
@@ -94,9 +95,14 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 4, height: 0 },
         textShadowRadius: 5,
         alignSelf: 'center',
+        position: "relative",
     },
     like: {
-        marginTop: 15,
+        width: 25,
+        height: 25,
+        marginLeft: 220,
+        marginTop: 14,
+        position: 'absolute',
     },
     imagenContainer: {
         alignSelf: 'center',

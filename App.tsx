@@ -1,99 +1,51 @@
-import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from "react-native";
-
-import {NoticiasRectangle} from "./app/noticiasComponent/NoticiaRectangle";
+import {Image, StyleSheet, Text, View, ImageBackground, ScrollView} from 'react-native';
+import {ItemBlurText} from "./app/CharacterDetailComponent/ItemBlurText";
 
 export default function App() {
     return (
-        <ImageBackground source={require('./assets/fondo_proyecto.jpg')} style={styles.container} >
-            <ScrollView style={styles.containerScroll} horizontal={false}>
-                <View>
-                    <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
-                    <Text style={styles.titulo}>NOTICIAS</Text>
+        <ImageBackground
+            source={require("./assets/fondo_proyecto.jpg")}
+            style={styles.container}
+        >
+            <View>
+                <Image style={styles.imagenChaoz} source={require("./assets/chaoz.png")}></Image>
+                <Text style={styles.titulo}>PERSONAJES</Text>
+            </View>
+            <ScrollView style={styles.principal} horizontal={false}>
+                <View style={styles.adjustContainer}>
+                    <View style={{flexDirection:'row'}}>
+                        <Text style={styles.goku}>Goku (Super)</Text>
+                        <Image style={styles.like} source={require("./assets/Like.png")}></Image>
+                    </View>
+                    <View style={styles.imagenContainer}>
+                        <Image style={styles.imagen} source={require("./assets/goku.jpg")}/>
+                    </View>
+
+                    <Text style={styles.habilidadesTitle}>HABILIDADES</Text>
+                    <View style={styles.habilidadesContainer}>
+                        <ItemBlurText text={'Teletransportación'} habilitate={1}></ItemBlurText>
+                        <ItemBlurText text={'A tope'} habilitate={1}></ItemBlurText>
+                        <ItemBlurText text={'SuperKameHameha'} habilitate={2}></ItemBlurText>
+                        <ItemBlurText text={'Explosión dragón'} habilitate={2}></ItemBlurText>
+                        <ItemBlurText text={'SuperGenkidama'} habilitate={3}></ItemBlurText>
+                    </View>
+
+
+                    <View style={styles.transformacionesContainer}>
+                        <Text style={styles.habilidadesTitle}>TRANSFORMACIONES</Text>
+                        <ScrollView horizontal={true}>
+                            <Image style={styles.imagenTrans} source={require("./assets/b0a4c26777707c9e3121e735faa3b71c.jpg")}/>
+                            <Image style={styles.imagenTrans} source={require("./assets/b0a4c26777707c9e3121e735faa3b71c.jpg")}/>
+                            <Image style={styles.imagenTrans} source={require("./assets/b0a4c26777707c9e3121e735faa3b71c.jpg")}/>
+                        </ScrollView>
+                    </View>
                 </View>
-
-                <NoticiasRectangle
-                    videoUrl={'https://www.youtube.com/embed/2f8v9L8fyok'}
-                    title={"AJUSTES EN EL SISTEMA DE COMBATE"}
-                    description={"Ataques de carga (ataque de golpe o cadena frenética): ya no retrocederás mientras cargues al recibir un ataque frenético o una Ráfaga de Ki frenética de un rival en el modo Sparking!.\n" +
-                        "Ataque frenético: ahora es más difícil ejecutar por error un ataque de golpe durante los ataques frenéticos.\n" +
-                        "Gran Tajo: golpear a un rival que está cayendo después de un Gran Tajo con otro Gran Tajo lo hará volar por los aires dando vueltas.\n" +
-                        "Ráfaga de Ki frenética: ya no tendrás que ejecutar una evasión veloz cuando te golpeen.\n" +
-                        "Ráfaga de Ki de golpe: ahora será más fácil que te golpeen cuando dispares al moverte.\n" +
-                        "Percepción/Superpercepción:  \n" +
-                        "‐Tras su activación, se consumirá una cierta cantidad de Ki. \n" +
-                        "‐Se ha aumentado el tiempo para poder ejecutar la siguiente acción una vez terminado el movimiento. \n" +
-                        "Supercontraataque: ha aumentado el tiempo para poder ejecutar una acción tras fallar al realizar el movimiento.\n" +
-                        "Impacto Veloz: se ha retrasado el momento de poder volver a ejecutar una acción una vez que acabe el movimiento.\n" +
-                        "Cambio de persecución: el daño infligido por personajes gigantes se ha reducido cuando se realice un cambio de persecución contra ellos.\n" +
-                        "Recuperación de impacto:  \n" +
-                        "‐Cuando te derriben con Golpe Levantador, si mantienes pulsado el botón, se activará la recuperación de impacto al tocar el suelo.  \n" +
-                        "‐Además, cuando te derriben y salgas dando vueltas, si mantienes pulsado el botón, se activará la recuperación de impacto al tocar el suelo."}/>
-
-                <NoticiasRectangle
-                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
-                    title={"AJUSTES FUNCIONALIDAD Y HABILIDADES"}
-                    description={"Combate de episodio: ahora se puede cambiar la dificultad incluso si estás utilizando un Orbe Dragón.\n" +
-                        "Combate personalizado: se han añadido más situaciones, efectos y texto que podrás configurar.\n" +
-                        "Partida de jugador:  \n" +
-                        "‐ Se ha modificado la partida rápida para que no tengas que entrar en una sala y te emparejen instantáneamente con un rival.\n" +
-                        "‐ También hemos añadido \"Búsqueda de sala rápida\" a la partida rápida.  \n" +
-                        "Partida igualada: se ha añadido un tiempo de espera antes del comienzo de la partida como penalización según el número de veces que te hayas desconectado.\n" +
-                        "Configuración del combate: ahora puedes ver la explicación de los controles al seleccionar un personaje.\n" +
-                        "Entrenamiento: se ha añadido la opción \"En guardia tras los ataques\" cuando se juegue contra una CPU." +
-                        "" + "\n" + "\n" + "\n" +
-                        "Habilidades generales de evasión automática (p. ej., Sentido salvaje): el adversario no podrá usar estas habilidades al realizar un combo y ejecutar a continuación una precipitación.\n" +
-                        "Sentido salvaje: se ha reducido el daño de ataque.\n" +
-                        "Kaioken: se ha reducido el consumo de habilidad acumulada (solo para Son Goku [Z - Inicio]).\n" +
-                        "¡Tachán!: se ha reducido el consumo de habilidad acumulada.\n" +
-                        "¡Solo necesito cinco segundos!: el Ki se recupera completamente."}/>
-
-                <NoticiasRectangle
-                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
-                    title={"11 PERSONAJES: SUPER HERO!"}
-                    description={"Los nuevos personajes que debutan en DRAGON BALL: Sparking! ZERO  son:\n" +
-                        "\n" +
-                        " \n" +
-                        "\n" +
-                        "• Son Gohan (Super Hero)\n" +
-                        "\n" +
-                        "• Son Gohan (Super Hero), Súper Saiyan\n" +
-                        "\n" +
-                        "• Son Gohan definitivo (Super Hero)\n" +
-                        "\n" +
-                        "• Son Gohan Beast\n" +
-                        "\n" +
-                        "• Piccolo (Super Hero)\n" +
-                        "\n" +
-                        "• Piccolo (Super Hero), despertar del poder\n" +
-                        "\n" +
-                        "• Piccolo Naranja\n" +
-                        "\n" +
-                        "• Piccolo Naranja, forma gigante\n" +
-                        "\n" +
-                        "• Gamma 1\n" +
-                        "\n" +
-                        "• Gamma 2\n" +
-                        "\n" +
-                        "• Cell Max"}/>
-
-                <NoticiasRectangle
-                    videoUrl={'https://www.youtube.com/embed/E2NOsM9u7wE'}
-                    title={""}
-                    description={""}/>
-
             </ScrollView>
         </ImageBackground>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-
-    container: {
-        flex: 1,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     imagenChaoz: {
         marginTop: 15,
         width: 50,
@@ -112,7 +64,82 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 4, height: 0 },
         textShadowRadius: 5,
     },
-    containerScroll: {
-        width: "90%",
+    container: {
+        flex: 1,
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    principal: {
+        width: '100%',
+        flex: 1,
+        marginVertical: 30
+    },
+    adjustContainer: {
+        width: '95%',
+        margin: "auto",
+        marginBottom: 40,
+        borderWidth: 2,
+        borderColor: "black",
+        backgroundColor: 'rgba(255, 255, 255, 0.39)',
+        alignItems:'center',
+    },
+    goku: {
+        fontSize: 22,
+        fontWeight: "bold",
+        textAlign: "center",
+        marginBottom: 10,
+        marginTop: 10,
+        color: "white",
+        textShadowColor: "black",
+        textShadowOffset: { width: 4, height: 0 },
+        textShadowRadius: 5,
+        alignSelf: 'center',
+        position: "relative",
+    },
+    like: {
+        width: 25,
+        height: 25,
+        marginLeft: 220,
+        marginTop: 14,
+        position: 'absolute',
+    },
+    imagenContainer: {
+        alignSelf: 'center',
+    },
+    imagen: {
+        marginTop: 10,
+        marginBottom: 40,
+        width: 150,
+        height: 200,
+        borderWidth: 2,
+        borderColor: "black",
+    },
+    habilidadesTitle: {
+        fontSize: 18,
+        fontWeight: "bold",
+        marginBottom: 10,
+        textAlign: "center",
+        color: "white",
+        textShadowColor: "black",
+        textShadowOffset: { width: 4, height: 0 },
+        textShadowRadius: 5,
+    },
+    habilidadesContainer: {
+        width: "100%",
+        alignItems: "center",
+    },
+    transformacionesContainer: {
+        alignItems: "center",
+        marginTop: 30,
+    },
+    imagenTrans: {
+        marginTop: 10,
+        marginBottom: 15,
+        marginHorizontal: 10,
+        width: 150,
+        height: 200,
+        borderWidth: 2,
+        borderColor: "black",
     }
-})
+});

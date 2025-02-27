@@ -13,16 +13,16 @@ export default function App() {
                 </View>
 
                 <HistoriaWhatifRectangle
-                    url={"piccolo"}
+                    url={"freezer"}
                     title={"El ejercito de Freezer" + "\n" + "se une al combate?"}
                     description={"El primer y único episodio Sparking que puedes desbloquear en la historia de Freezer es el que recibe el título de \"El ejército de Freezer se une al combate\", al que se puede acceder durante las fases del Arco de Bills, Dios de la Destrucción/resurrección de Freezer, en el Capítulo 5."}
-                    url2={"wif"}
+                    url2={"wifreezer1"}
                     description2={"Comienza por entrar en la fase titulada \"Freezer resucitado\".\n" + "\n" +
                         "Aquí debes cumplir con la condición secundaria, la cual te pide derrotar a Goku y Vegeta muy rápidamente.\n" + "\n" +
                         "Si logras vencerlos a los dos en un tiempo concreto, abrirás la ruta hacia el episodio Sparking, que continúa en la fase \"La filosofía de Freezer\".\n" + "\n" +
                         "A partir de este punto podrás escoger entre distintos personajes: Dodoria y Zarbon, Cooler, La Fuerza Ginyu y King Cold.\n" + "\n" +
                         "Para completar el resto del episodio, tendrás que seleccionar cada elección de personaje y completar los sucesivos combates que le siguen a cada uno.\n" + "\n"}
-                    url3={"wif"}
+                    url3={"wifreezer2"}
                     description3={"La parte que podríamos considerar más complicada de este episodio es la de derrotar muy rápido a Goku y Vegeta en \"Freezer resucitado\". " + "\n" +
                         "Como otras veces, el juego no te dirá exactamente con qué velocidad debes derrotarlos, pero ya te adelantamos que tienes más o menos un par de minutos para ello. Es un tiempo muy ajustado.\n" +
                         "\n" +
